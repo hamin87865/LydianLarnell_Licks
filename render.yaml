@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: lydian-larnell-licks
+    env: node
+    plan: starter
+    buildCommand: npm ci && npm run check && npm test && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    disk:
+      name: uploads
+      mountPath: /var/data
+      sizeGB: 10
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22
+      - key: UPLOAD_ROOT
+        value: /var/data/uploads
+      - key: ACCOUNT_ENCRYPTION_KEY
+        sync: false
+      - key: DB_SSL_MODE
+        value: require
+      - key: CREATE_DEFAULT_ADMIN
+        value: "false"
+      - key: SESSION_SECRET
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: CLIENT_URL_WWW
+        sync: false
+      - key: RENDER_EXTERNAL_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: APP_BASE_URL
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+      - key: VITE_TOSS_PAYMENTS_CLIENT_KEY
+        sync: false
+      - key: TOSS_SECRET_KEY
+        sync: false
+      - key: TOSS_PAYMENTS_SECRET_KEY
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: ADMIN_ALERT_EMAIL_TO
+        sync: false
+      - key: ADMIN_ALERT_EMAIL_FROM
+        sync: false

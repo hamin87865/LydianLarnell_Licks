@@ -49,8 +49,8 @@ export default function TermsPage() {
             </div>
             <div className={`${bodyClassName} space-y-2`}>
               <p className={itemClassName}>1. 본 약관은 서비스 화면에 게시하거나 기타의 방법으로 공지함으로써 효력이 발생합니다.</p>
-              <p className={itemClassName}>2. 서비스는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있으며, 시행일 최소 7일 전 공지, 이용자가 거부할 권리 명시를 해야 합니다.</p>
-              <p className={itemClassName}>3. 변경된 약관은 공지된 7일후 시점부터 효력이 발생하며, 이용자가 계속 서비스를 이용할 경우 변경에 동의한 것으로 간주합니다.</p>
+              <p className={itemClassName}>2. 서비스는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있습니다.</p>
+              <p className={itemClassName}>3. 변경된 약관은 공지 시점부터 효력이 발생하며, 이용자가 계속 서비스를 이용할 경우 변경에 동의한 것으로 간주합니다.</p>
             </div>
           </section>
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
               <h2 className={titleClassName}>제4조 (회원가입 및 계정관리)</h2>
             </div>
             <div className={`${bodyClassName} space-y-2`}>
-              <p className={itemClassName}>1. 이용자는 이메일, 비밀번호, 닉네임을 입력하여 회원가입을 신청할 수 있습니다.</p>
+              <p className={itemClassName}>1. 이용자는 이름, 이메일, 비밀번호, 닉네임을 입력하여 회원가입을 신청할 수 있습니다.</p>
               <p className={itemClassName}>2. 서비스는 이메일 인증을 통해 회원가입 절차를 완료합니다.</p>
               <p className={itemClassName}>3. 회원은 자신의 계정 정보를 안전하게 관리할 책임이 있으며, 이를 제3자에게 제공해서는 안 됩니다.</p>
               <p className={itemClassName}>4. 계정 도용으로 인해 발생하는 모든 책임은 이용자에게 있으며, 이용자의 과실이 없는 경우 사업자 책임이 가능합니다.</p>
@@ -74,7 +74,7 @@ export default function TermsPage() {
               <p className={itemClassName}>1. 서비스는 음악 학습을 위한 콘텐츠(릭, 영상, PDF 등)를 제공 및 공유하는 플랫폼입니다.</p>
               <p className={itemClassName}>2. 이용자는 로그인 여부와 관계없이 콘텐츠를 열람할 수 있습니다.</p>
               <p className={itemClassName}>3. 단, PDF 다운로드 및 일부 기능은 로그인한 회원에게만 제공될 수 있습니다.</p>
-              <p className={itemClassName}>4. 서비스는 운영상 필요에 따라 기능을 변경하거나 중단할 수 있으며, 합리적 사유(점검, 장애등) 정확한 명시를 합니다.</p>
+              <p className={itemClassName}>4. 서비스는 운영상 필요에 따라 기능을 변경하거나 중단할 수 있으며, 합리적 사유(점검, 장애등)를 정확히 명시를 합니다.</p>
             </div>
           </section>
 
@@ -83,7 +83,7 @@ export default function TermsPage() {
               <h2 className={titleClassName}>제6조 (아티스트 및 콘텐츠 업로드)</h2>
             </div>
             <div className={`${bodyClassName} space-y-2`}>
-              <p className={itemClassName}>1. 아티스트는 서비스에 영상, 텍스트, PDF 등의 콘텐츠를 업로드할 수 있습니다.</p>
+              <p className={itemClassName}>1. 아티스트는 서비스에 영상, 텍스트, PDF 콘텐츠를 업로드할 수 있습니다.</p>
               <p className={itemClassName}>2. 업로드된 콘텐츠의 저작권 및 책임은 해당 아티스트에게 있습니다.</p>
               <p className={itemClassName}>3. 아티스트는 타인의 권리를 침해하는 콘텐츠를 업로드해서는 안 됩니다.</p>
               <p className={itemClassName}>4. 서비스는 다음과 같은 경우 콘텐츠를 사전 통보 없이 삭제할 수 있습니다.</p>
@@ -112,7 +112,7 @@ export default function TermsPage() {
                 3. 사용자는 서비스의 사전 동의 없이 콘텐츠를 복제, 배포, 판매, 재가공, 공개 전송하는 행위를 할 수 없습니다.
               </p>
               <p className={itemClassName}>
-                4. 서비스 내에 등록된 유튜브 링크 영상의 경우, 해당 콘텐츠의 저작권은 원 제작권자 및 유튜브 정책에 따르며, 뮤지션은 유튜브의 이용약관 및 관련 정책을 준수해야 합니다..
+                4. 서비스 내에 등록된 유튜브 링크 영상의 경우, 해당 콘텐츠의 저작권은 원 제작권자 및 유튜브 정책에 따르며, 뮤지션은 유튜브의 이용약관 및 관련 정책을 준수해야 합니다.
               </p>
             </div>
           </section>
@@ -203,7 +203,7 @@ export default function TermsPage() {
               <p>1. 서비스는 이용자가 게시하거나 제공한 콘텐츠의 정확성, 확장성, 신뢰성, 완전성에 대해 보증하지 않으며, 이로 인해 발생하는 손해에 대해 책임을지지 않습니다.</p>
               <p>2. 서비스는 이용자 간 또는 이용자와 제3자 간에 발생한 분쟁에 대해 개입하지 않으며, 이에 대한 책임을 지지 않습니다.</p>
               <p>3. 서비스는 무료로 제공되는 콘텐츠 및 서비스에 대하여 품질, 안전성, 적합성 등에 대한 어떠한 보증도 하지 않습니다.</p>
-              <p>4. 서비스는 천재지변, 시스템 장애, 해킹 등 불가항력적인 사유로 인해 발생한 손해에 책임을 지지 않습니다</p>
+              <p>4. 서비스는 천재지변, 시스템 장애, 해킹 등 불가항력적인 사유로 인해 발생한 손해에 책임을 지지 않습니다.</p>
               <p>5. 단, 서비스의 고의 또는 중대한 과실로 인하여 발생한 손해에 대해서는 관련 법령에 따라 책임을 부담합니다.</p>
             </div>
           </section>

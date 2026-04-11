@@ -183,9 +183,9 @@ export default function PrivacyPage() {
 
                 <p>2. 서비스는 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다.</p>
                 <div className="space-y-2">
-                  <p className={dashItemClassName}>- Render Inc.: 서버 및 데이터베이스 운영</p>
+                  <p className={dashItemClassName}>- Render Inc: 서버 및 데이터베이스 운영</p>
                   <p className={dashItemClassName}>- PostgreSQL(DB 서비스): 데이터 저장 및 관리</p>
-                  <p className={dashItemClassName}>- Google LLC: 이메일 발송 및 관련 서비스 제공</p>
+                  <p className={dashItemClassName}>- Google SMPT: 이메일 발송 및 관련 서비스 제공</p>
                 </div>
 
                 <p>3. 서비스 위탁계약 체결 시 개인정보 보호 관련 법령에 따라 다음 사항을 계약에 포함하고 이를 준수하도록 관리·감독합니다.</p>

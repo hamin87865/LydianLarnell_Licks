@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* 대표전화 아래 구분선 */}
-            <div className="mx-auto my-6 w-full max-w-xl border-t-2 border-white/20" />
+            <div className="mx-auto my-6 w-full max-w-120 border-t-2 border-white/20" />
 
             {/* 정책 링크 */}
             <div className="mx-auto mb-6 flex max-w-4xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 text-sm text-gray-400">

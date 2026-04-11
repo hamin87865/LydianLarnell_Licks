@@ -1,0 +1,336 @@
+warning: in the working copy of 'client/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'client/src/pages/Home.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'client/src/pages/SettlementMenu.tsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/client/index.html b/client/index.html[m
+[1mindex f137989..cba1a4c 100644[m
+[1m--- a/client/index.html[m
+[1m+++ b/client/index.html[m
+[36m@@ -4,23 +4,26 @@[m
+     <meta charset="UTF-8" />[m
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />[m
+ [m
+[32m+[m[32m    <!-- Open Graph -->[m
+     <meta property="og:title" content="Lydian Larnell Licks" />[m
+[31m-    <meta[m
+[31m-      property="og:description"[m
+[31m-      content="뮤지션이 자신의 재능과 콘텐츠를 자유롭게 표현하고 공유할 수 있는 공간."[m
+[31m-    />[m
+[32m+[m[32m    <meta property="og:description" content="연주와 품격을 완성하는 선택" />[m
+     <meta property="og:type" content="website" />[m
+[31m-    <meta property="og:image" content="/favicon.png" />[m
+[32m+[m[32m    <meta property="og:image" content="/og-image.png" />[m
+[32m+[m[32m    <meta property="og:url" content="https://lydianlarnelllicks.com" />[m
+[32m+[m[32m    <meta property="og:site_name" content="Lydian Larnell Licks" />[m
+[32m+[m[32m    <meta property="og:locale" content="ko_KR" />[m
+ [m
+[32m+[m[32m    <!-- Twitter Card -->[m
+     <meta name="twitter:card" content="summary_large_image" />[m
+     <meta name="twitter:title" content="Lydian Larnell Licks" />[m
+[31m-    <meta[m
+[31m-      name="twitter:description"[m
+[31m-      content="뮤지션이 자신의 재능과 콘텐츠를 자유롭게 표현하고 공유할 수 있는 공간."[m
+[31m-    />[m
+[31m-    <meta name="twitter:image" content="/favicon.png" />[m
+[32m+[m[32m    <meta name="twitter:description" content="연주와 품격을 완성하는 선택" />[m
+[32m+[m[32m    <meta name="twitter:image" content="/og-image.png" />[m
+ [m
+[32m+[m[32m    <!-- Favicon -->[m
+     <link rel="icon" type="image/png" href="/favicon.png" />[m
+[32m+[m[32m    <link rel="apple-touch-icon" href="/favicon.png" />[m
+[32m+[m
+[32m+[m[32m    <!-- Fonts -->[m
+     <link rel="preconnect" href="https://fonts.googleapis.com" />[m
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />[m
+     <link[m
+[1mdiff --git a/client/public/favicon.png b/client/public/favicon.png[m
+[1mindex 77094ef..bc2d941 100644[m
+Binary files a/client/public/favicon.png and b/client/public/favicon.png differ
+[1mdiff --git a/client/src/pages/Home.tsx b/client/src/pages/Home.tsx[m
+[1mindex fe0f3ae..3344a67 100644[m
+[1m--- a/client/src/pages/Home.tsx[m
+[1m+++ b/client/src/pages/Home.tsx[m
+[36m@@ -59,7 +59,7 @@[m [mexport default function Home() {[m
+             </div>[m
+ [m
+             {/* 대표전화 아래 구분선 */}[m
+[31m-            <div className="mx-auto my-6 w-full max-w-xl border-t-2 border-white/20" />[m
+[32m+[m[32m            <div className="mx-auto my-6 w-full max-w-120 border-t-2 border-white/20" />[m
+ [m
+             {/* 정책 링크 */}[m
+             <div className="mx-auto mb-6 flex max-w-4xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 text-sm text-gray-400">[m
+[1mdiff --git a/client/src/pages/SettlementMenu.tsx b/client/src/pages/SettlementMenu.tsx[m
+[1mindex 2687f7c..a849fe8 100644[m
+[1m--- a/client/src/pages/SettlementMenu.tsx[m
+[1m+++ b/client/src/pages/SettlementMenu.tsx[m
+[36m@@ -49,7 +49,7 @@[m [mfunction getStatusTone(status: "pending" | "paid") {[m
+ [m
+ function SummaryHeader() {[m
+   return ([m
+[31m-    <div className="hidden md:grid grid-cols-[1.4fr_0.9fr_1fr_0.8fr] gap-4 px-4 py-3 text-xs font-semibold text-gray-400 border-b border-white/10">[m
+[32m+[m[32m    <div className="hidden md:grid grid-cols-[1.5fr_1fr_1fr_1.05fr] gap-4 px-4 py-3 text-sm font-semibold text-gray-400 border-b border-white/10">[m
+       <div>이름(닉네임)</div>[m
+       <div>합계금액</div>[m
+       <div>계좌정보(일부)</div>[m
+[36m@@ -128,7 +128,7 @@[m [mfunction SettlementCard({[m
+       {expanded && ([m
+         <div className="border-t border-white/10">[m
+           <div className="px-4 py-4">[m
+[31m-            <div className="grid grid-cols-[1.45fr_0.85fr_0.55fr_0.95fr] gap-3 text-xs font-semibold text-gray-400 pb-3">[m
+[32m+[m[32m            <div className="grid grid-cols-[1.4fr_0.75fr_0.55fr_0.88fr] gap-3 text-xs font-semibold text-gray-400 pb-3">[m
+               <div>제목</div>[m
+               <div>가격</div>[m
+               <div>건수</div>[m
+[1mdiff --git a/client/src/pages/policy/BusinessPage.tsx b/client/src/pages/policy/BusinessPage.tsx[m
+[1mindex fcc050c..1f11954 100644[m
+[1m--- a/client/src/pages/policy/BusinessPage.tsx[m
+[1m+++ b/client/src/pages/policy/BusinessPage.tsx[m
+[36m@@ -1,10 +1,74 @@[m
+[31m-export default function TermsPage() {[m
+[32m+[m[32mexport default function BusinessInfoPage() {[m
+[32m+[m[32m  const sectionClassName =[m
+[32m+[m[32m    "rounded-2xl border border-white/10 bg-white/[0.03] p-5 md:p-7";[m
+[32m+[m[32m  const titleClassName = "text-xl font-semibold text-white md:text-2xl";[m
+[32m+[m[32m  const tableClassName =[m
+[32m+[m[32m    "w-full border-collapse text-sm text-gray-300 md:text-base";[m
+[32m+[m[32m  const thClassName =[m
+[32m+[m[32m    "w-1/3 border-b border-white/10 py-3 text-left font-medium text-white";[m
+[32m+[m[32m  const tdClassName =[m
+[32m+[m[32m    "border-b border-white/10 py-3 text-gray-300";[m
+[32m+[m
+   return ([m
+[31m-    <div className="min-h-screen bg-black text-white p-10">[m
+[31m-      <h1 className="text-3xl font-bold mb-6">이용약관</h1>[m
+[31m-      <p className="text-gray-300">[m
+[31m-        여기에 이용약관 내용을 작성하면 됩니다.[m
+[31m-      </p>[m
+[32m+[m[32m    <div className="min-h-screen bg-black px-6 py-12 text-white md:px-10 md:py-16">[m
+[32m+[m[32m      <div className="mx-auto max-w-4xl">[m
+[32m+[m[32m        <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">[m
+[32m+[m[32m          사업자 정보[m
+[32m+[m[32m        </h1>[m
+[32m+[m
+[32m+[m[32m        <p className="mb-10 text-sm leading-7 text-white/60 md:text-base">[m
+[32m+[m[32m        </p>[m
+[32m+[m
+[32m+[m[32m        <section className={sectionClassName}>[m
+[32m+[m[32m          <h2 className={`mb-6 ${titleClassName}`}>[m
+[32m+[m[32m            통신판매사업자 정보[m
+[32m+[m[32m          </h2>[m
+[32m+[m
+[32m+[m[32m          <table className={tableClassName}>[m
+[32m+[m[32m            <tbody>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>상호</th>[m
+[32m+[m[32m                <td className={tdClassName}>[m
+[32m+[m[32m                  리디안라넬 (Lydian Larnell)[m
+[32m+[m[32m                </td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>대표자명</th>[m
+[32m+[m[32m                <td className={tdClassName}>[m
+[32m+[m[32m                  강신우 (Kang ShinWoo)[m
+[32m+[m[32m                </td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>사업자 등록번호</th>[m
+[32m+[m[32m                <td className={tdClassName}>237-11-03075</td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>판매방식</th>[m
+[32m+[m[32m                <td className={tdClassName}>인터넷</td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>사업장 소재지</th>[m
+[32m+[m[32m                <td className={tdClassName}>[m
+[32m+[m[32m                  경상남도 김해시 월산로 82-62 102동 1603호[m
+[32m+[m[32m                  (부곡동, 석봉마을 대동아파트)[m
+[32m+[m[32m                </td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>신고일자</th>[m
+[32m+[m[32m                <td className={tdClassName}>2026.03.26</td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>법인 여부</th>[m
+[32m+[m[32m                <td className={tdClassName}>개인</td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m              <tr>[m
+[32m+[m[32m                <th className={thClassName}>취급 품목</th>[m
+[32m+[m[32m                <td className={tdClassName}>PDF 파일</td>[m
+[32m+[m[32m              </tr>[m
+[32m+[m[32m            </tbody>[m
+[32m+[m[32m          </table>[m
+[32m+[m[32m        </section>[m
+[32m+[m[32m      </div>[m
+     </div>[m
+   );[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/client/src/pages/policy/PrivacyPage.tsx b/client/src/pages/policy/PrivacyPage.tsx[m
+[1mindex 070a35d..cdf2a78 100644[m
+[1m--- a/client/src/pages/policy/PrivacyPage.tsx[m
+[1m+++ b/client/src/pages/policy/PrivacyPage.tsx[m
+[36m@@ -183,9 +183,9 @@[m [mexport default function PrivacyPage() {[m
+ [m
+                 <p>2. 서비스는 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다.</p>[m
+                 <div className="space-y-2">[m
+[31m-                  <p className={dashItemClassName}>- Render Inc.: 서버 및 데이터베이스 운영</p>[m
+[32m+[m[32m                  <p className={dashItemClassName}>- Render Inc: 서버 및 데이터베이스 운영</p>[m
+                   <p className={dashItemClassName}>- PostgreSQL(DB 서비스): 데이터 저장 및 관리</p>[m
+[31m-                  <p className={dashItemClassName}>- Google LLC: 이메일 발송 및 관련 서비스 제공</p>[m
+[32m+[m[32m                  <p className={dashItemClassName}>- Google SMPT: 이메일 발송 및 관련 서비스 제공</p>[m
+                 </div>[m
+ [m
+                 <p>3. 서비스 위탁계약 체결 시 개인정보 보호 관련 법령에 따라 다음 사항을 계약에 포함하고 이를 준수하도록 관리·감독합니다.</p>[m
+[1mdiff --git a/client/src/pages/policy/RefundPage.tsx b/client/src/pages/policy/RefundPage.tsx[m
+[1mindex bb46fe9..a295f9e 100644[m
+[1m--- a/client/src/pages/policy/RefundPage.tsx[m
+[1m+++ b/client/src/pages/policy/RefundPage.tsx[m
+[36m@@ -25,7 +25,7 @@[m [mexport default function RefundPage() {[m
+             </div>[m
+ [m
+             <div className={`${bodyClassName} space-y-3`}>[m
+[31m-              <p className={itemClassName}>1. 서비스에서 제공되는 콘텐츠느 다음과 같이 구분됩니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>1. 서비스에서 제공되는 콘텐츠는 다음과 같이 구분됩니다.</p>[m
+               <div className="space-y-2">[m
+                 <p className={subItemClassName}>① 무료 콘텐츠: 회원이 별도의 결제 없이 이용할 수 있는 영상, 텍스트 등 콘텐츠</p>[m
+                 <p className={subItemClassName}>② 유료 콘텐츠: 이용자가 결제를 통해 이용 권한을 획득하는 디지털 콘텐츠</p>[m
+[36m@@ -38,7 +38,7 @@[m [mexport default function RefundPage() {[m
+               </div>[m
+ [m
+               <p className={itemClassName}>3. 이용자는 유료 콘텐츠 구매 시 해당 콘텐츠에 대한 이용 권한을 부여받으며, 콘텐츠의 소유권 또는 저작권은 제작자에게 귀속됩니다.</p>[m
+[31m-              <p className={itemClassName}>4. 모든 유료 콘텐츠 무형의 디지털 콘텐츠로 제공되며, 별도의 물리적 상춤은 제공되지 않습니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>4. 모든 유료 콘텐츠 무형의 디지털 콘텐츠로 제공되며, 별도의 물리적 상품은 제공되지 않습니다.</p>[m
+             </div>[m
+           </section>[m
+ [m
+[36m@@ -56,7 +56,7 @@[m [mexport default function RefundPage() {[m
+               </div>[m
+ [m
+               <p className={itemClassName}>2. 유료 콘텐츠의 가격은 서비스 내에 표시된 금액을 기준으로 하며, 별도의 표시가 없는 한 부가세가 포함된 금액으로 합니다.</p>[m
+[31m-              <p className={itemClassName}>3. 결제가 정상적으로 완료되면 이용자에게 해당 콘텐츠에 대한 잉용 권한이 즉시 부여됩니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>3. 결제가 정상적으로 완료되면 이용자에게 해당 콘텐츠에 대한 이용 권한이 즉시 부여됩니다.</p>[m
+ [m
+               <p className={itemClassName}>4. 유료 콘텐츠의 이용 방식은 다음과 같습니다.</p>[m
+               <div className="space-y-2">[m
+[36m@@ -86,8 +86,6 @@[m [mexport default function RefundPage() {[m
+                   단, 위와 같은 경우에도 서비스는 사전에 해당 사실을 명확히 고지하고 이용자의 동의를 받은 경우에 한하여 청약철회를 제한할 수 있습니다.[m
+                 </p>[m
+               </div>[m
+[31m-[m
+[31m-              <p className={itemClassName}>4. 다음 각 호의 경우에는 환불이 가능합니다.</p>[m
+             </div>[m
+           </section>[m
+ [m
+[36m@@ -106,10 +104,10 @@[m [mexport default function RefundPage() {[m
+ [m
+                 <p className={itemClassName}>3. 제2항에 따른 청약철회 제한은, 서비스가 결제 전에 다음 사항을 명확히 고지하고 이용자의 동의를 받은 경우에 한하여 적용됩니다.</p>[m
+                 <div className="space-y-2">[m
+[31m-                  <p className={subItemClassName}>① 디지털 콘텐츠의 특성상 이용 또는 다운로드 시 청약철회가 제한될 수 있다는 사실</p>[m
+[32m+[m[32m                  <p className={subItemClassName}>① 디지털 콘텐츠의 특성상 이용 또는 다운로드 시 청약 철회가 제한될 수 있다는 사실</p>[m
+                 </div>[m
+ [m
+[31m-                <p className={itemClassName}>4. 이용자가 콘텐츠를 다운로드하거나 재생하는 등 이용을 개시한 경우, 해당 시점부터 청약철회가 제한됩니다.</p>[m
+[32m+[m[32m                <p className={itemClassName}>4. 이용자가 콘텐츠를 다운로드하거나 재생하는 등 이용을 게시한 경우, 해당 시점부터 청약철회가 제한됩니다.</p>[m
+ [m
+                 <p className={itemClassName}>5. 다음 각 호의 경우에는 제2항에도 불구하고 환불이 가능합니다.</p>[m
+                 <div className="space-y-2">[m
+[36m@@ -139,7 +137,7 @@[m [mexport default function RefundPage() {[m
+                   <p className={subItemClassName}>④ 계정의 일시 정지 또는 영구 이용 제한</p>[m
+                 </div>[m
+ [m
+[31m-                <p className={itemClassName}>3. 서비스는 위반 행위가 중대하거나 반복되는 경우, 관련 법령에 따라 ㅁ민형사상 법적 조치를 취할 수 있습니다.</p>[m
+[32m+[m[32m                <p className={itemClassName}>3. 서비스는 위반 행위가 중대하거나 반복되는 경우, 관련 법령에 따라 민,형사상 법적 조치를 취할 수 있습니다.</p>[m
+                 <p className={itemClassName}>4. 서비스는 제재 조치 시 사전 또는 사후에 그 사유를 이용자에게 통지할 수 있습니다.</p>[m
+               </div>[m
+           </section>[m
+[36m@@ -157,7 +155,7 @@[m [mexport default function RefundPage() {[m
+                 <p className={subItemClassName}>③ 이용자의 부주의 또는 과실로 인한 파일 손실 또는 데이터 손상</p>[m
+               </div>[m
+ [m
+[31m-              <p className={itemClassName}>2. 서비스는 뮤료로 제공되는 콘텐츠에 대하여 품질, 안정성, 정확성 등에 대해 보증하지 않으며, 이에 따른 손해에 대해 책임을지지 않습니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>2. 서비스는 무료로 제공되는 콘텐츠에 대하여 품질, 안정성, 정확성 등에 대해 보증하지 않으며, 이에 따른 손해에 대해 책임을지지 않습니다.</p>[m
+               <p className={itemClassName}>3. 단, 서비스의 고의 또는 중대한 과실로 인하여 발생한 손해에 대해서는 관련 법령에 따라 책임을 부담합니다.</p>[m
+             </div>[m
+           </section>[m
+[36m@@ -185,9 +183,8 @@[m [mexport default function RefundPage() {[m
+                   <p className={subItemClassName}>① 상호</p>[m
+                   <p className={subItemClassName}>② 대표자 성명</p>[m
+                   <p className={subItemClassName}>③ 사업자등록번호</p>[m
+[31m-                  <p className={subItemClassName}>④ 통신판매업 신고버호</p>[m
+[31m-                  <p className={subItemClassName}>⑤ 사업장 소재지</p>[m
+[31m-                  <p className={subItemClassName}>⑥ 전자우편주소 및 연락처</p>[m
+[32m+[m[32m                  <p className={subItemClassName}>④ 사업장 소재지</p>[m
+[32m+[m[32m                  <p className={subItemClassName}>⑤ 전자우편주소 및 연락처</p>[m
+                 </div>[m
+ [m
+                 <p className={itemClassName}>2. 서비스는 유료 디지털 콘텐츠의 결제 이전에 다음 사항을 이용자에게 명확히 안내합니다.</p>[m
+[36m@@ -219,7 +216,7 @@[m [mexport default function RefundPage() {[m
+             </div>[m
+             <div className={`${bodyClassName} space-y-2`}>[m
+               <p>본 정책은 시행일로부터 적용됩니다.</p>[m
+[31m-              <p>시행일: 2026년 03월 27일</p>[m
+[32m+[m[32m              <p>시행일: 2026년 4월 10일</p>[m
+             </div>[m
+           </section>[m
+         </div>[m
+[1mdiff --git a/client/src/pages/policy/TermsPage.tsx b/client/src/pages/policy/TermsPage.tsx[m
+[1mindex 2defb14..e7405a5 100644[m
+[1m--- a/client/src/pages/policy/TermsPage.tsx[m
+[1m+++ b/client/src/pages/policy/TermsPage.tsx[m
+[36m@@ -49,8 +49,8 @@[m [mexport default function TermsPage() {[m
+             </div>[m
+             <div className={`${bodyClassName} space-y-2`}>[m
+               <p className={itemClassName}>1. 본 약관은 서비스 화면에 게시하거나 기타의 방법으로 공지함으로써 효력이 발생합니다.</p>[m
+[31m-              <p className={itemClassName}>2. 서비스는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있으며, 시행일 최소 7일 전 공지, 이용자가 거부할 권리 명시를 해야 합니다.</p>[m
+[31m-              <p className={itemClassName}>3. 변경된 약관은 공지된 7일후 시점부터 효력이 발생하며, 이용자가 계속 서비스를 이용할 경우 변경에 동의한 것으로 간주합니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>2. 서비스는 관련 법령을 위배하지 않는 범위에서 본 약관을 변경할 수 있습니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>3. 변경된 약관은 공지 시점부터 효력이 발생하며, 이용자가 계속 서비스를 이용할 경우 변경에 동의한 것으로 간주합니다.</p>[m
+             </div>[m
+           </section>[m
+ [m
+[36m@@ -59,7 +59,7 @@[m [mexport default function TermsPage() {[m
+               <h2 className={titleClassName}>제4조 (회원가입 및 계정관리)</h2>[m
+             </div>[m
+             <div className={`${bodyClassName} space-y-2`}>[m
+[31m-              <p className={itemClassName}>1. 이용자는 이메일, 비밀번호, 닉네임을 입력하여 회원가입을 신청할 수 있습니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>1. 이용자는 이름, 이메일, 비밀번호, 닉네임을 입력하여 회원가입을 신청할 수 있습니다.</p>[m
+               <p className={itemClassName}>2. 서비스는 이메일 인증을 통해 회원가입 절차를 완료합니다.</p>[m
+               <p className={itemClassName}>3. 회원은 자신의 계정 정보를 안전하게 관리할 책임이 있으며, 이를 제3자에게 제공해서는 안 됩니다.</p>[m
+               <p className={itemClassName}>4. 계정 도용으로 인해 발생하는 모든 책임은 이용자에게 있으며, 이용자의 과실이 없는 경우 사업자 책임이 가능합니다.</p>[m
+[36m@@ -74,7 +74,7 @@[m [mexport default function TermsPage() {[m
+               <p className={itemClassName}>1. 서비스는 음악 학습을 위한 콘텐츠(릭, 영상, PDF 등)를 제공 및 공유하는 플랫폼입니다.</p>[m
+               <p className={itemClassName}>2. 이용자는 로그인 여부와 관계없이 콘텐츠를 열람할 수 있습니다.</p>[m
+               <p className={itemClassName}>3. 단, PDF 다운로드 및 일부 기능은 로그인한 회원에게만 제공될 수 있습니다.</p>[m
+[31m-              <p className={itemClassName}>4. 서비스는 운영상 필요에 따라 기능을 변경하거나 중단할 수 있으며, 합리적 사유(점검, 장애등) 정확한 명시를 합니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>4. 서비스는 운영상 필요에 따라 기능을 변경하거나 중단할 수 있으며, 합리적 사유(점검, 장애등)를 정확히 명시를 합니다.</p>[m
+             </div>[m
+           </section>[m
+ [m
+[36m@@ -83,7 +83,7 @@[m [mexport default function TermsPage() {[m
+               <h2 className={titleClassName}>제6조 (아티스트 및 콘텐츠 업로드)</h2>[m
+             </div>[m
+             <div className={`${bodyClassName} space-y-2`}>[m
+[31m-              <p className={itemClassName}>1. 아티스트는 서비스에 영상, 텍스트, PDF 등의 콘텐츠를 업로드할 수 있습니다.</p>[m
+[32m+[m[32m              <p className={itemClassName}>1. 아티스트는 서비스에 영상, 텍스트, PDF 콘텐츠를 업로드할 수 있습니다.</p>[m
+               <p className={itemClassName}>2. 업로드된 콘텐츠의 저작권 및 책임은 해당 아티스트에게 있습니다.</p>[m
+               <p className={itemClassName}>3. 아티스트는 타인의 권리를 침해하는 콘텐츠를 업로드해서는 안 됩니다.</p>[m
+               <p className={itemClassName}>4. 서비스는 다음과 같은 경우 콘텐츠를 사전 통보 없이 삭제할 수 있습니다.</p>[m
+[36m@@ -112,7 +112,7 @@[m [mexport default function TermsPage() {[m
+                 3. 사용자는 서비스의 사전 동의 없이 콘텐츠를 복제, 배포, 판매, 재가공, 공개 전송하는 행위를 할 수 없습니다.[m
+               </p>[m
+               <p className={itemClassName}>[m
+[31m-                4. 서비스 내에 등록된 유튜브 링크 영상의 경우, 해당 콘텐츠의 저작권은 원 제작권자 및 유튜브 정책에 따르며, 뮤지션은 유튜브의 이용약관 및 관련 정책을 준수해야 합니다..[m
+[32m+[m[32m                4. 서비스 내에 등록된 유튜브 링크 영상의 경우, 해당 콘텐츠의 저작권은 원 제작권자 및 유튜브 정책에 따르며, 뮤지션은 유튜브의 이용약관 및 관련 정책을 준수해야 합니다.[m
+               </p>[m
+             </div>[m
+           </section>[m
+[36m@@ -203,7 +203,7 @@[m [mexport default function TermsPage() {[m
+               <p>1. 서비스는 이용자가 게시하거나 제공한 콘텐츠의 정확성, 확장성, 신뢰성, 완전성에 대해 보증하지 않으며, 이로 인해 발생하는 손해에 대해 책임을지지 않습니다.</p>[m
+               <p>2. 서비스는 이용자 간 또는 이용자와 제3자 간에 발생한 분쟁에 대해 개입하지 않으며, 이에 대한 책임을 지지 않습니다.</p>[m
+               <p>3. 서비스는 무료로 제공되는 콘텐츠 및 서비스에 대하여 품질, 안전성, 적합성 등에 대한 어떠한 보증도 하지 않습니다.</p>[m
+[31m-              <p>4. 서비스는 천재지변, 시스템 장애, 해킹 등 불가항력적인 사유로 인해 발생한 손해에 책임을 지지 않습니다</p>[m
+[32m+[m[32m              <p>4. 서비스는 천재지변, 시스템 장애, 해킹 등 불가항력적인 사유로 인해 발생한 손해에 책임을 지지 않습니다.</p>[m
+               <p>5. 단, 서비스의 고의 또는 중대한 과실로 인하여 발생한 손해에 대해서는 관련 법령에 따라 책임을 부담합니다.</p>[m
+             </div>[m
+           </section>[m

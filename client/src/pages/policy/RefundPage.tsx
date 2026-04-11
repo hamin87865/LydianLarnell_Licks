@@ -25,7 +25,7 @@ export default function RefundPage() {
             </div>
 
             <div className={`${bodyClassName} space-y-3`}>
-              <p className={itemClassName}>1. 서비스에서 제공되는 콘텐츠느 다음과 같이 구분됩니다.</p>
+              <p className={itemClassName}>1. 서비스에서 제공되는 콘텐츠는 다음과 같이 구분됩니다.</p>
               <div className="space-y-2">
                 <p className={subItemClassName}>① 무료 콘텐츠: 회원이 별도의 결제 없이 이용할 수 있는 영상, 텍스트 등 콘텐츠</p>
                 <p className={subItemClassName}>② 유료 콘텐츠: 이용자가 결제를 통해 이용 권한을 획득하는 디지털 콘텐츠</p>
@@ -38,7 +38,7 @@ export default function RefundPage() {
               </div>
 
               <p className={itemClassName}>3. 이용자는 유료 콘텐츠 구매 시 해당 콘텐츠에 대한 이용 권한을 부여받으며, 콘텐츠의 소유권 또는 저작권은 제작자에게 귀속됩니다.</p>
-              <p className={itemClassName}>4. 모든 유료 콘텐츠 무형의 디지털 콘텐츠로 제공되며, 별도의 물리적 상춤은 제공되지 않습니다.</p>
+              <p className={itemClassName}>4. 모든 유료 콘텐츠 무형의 디지털 콘텐츠로 제공되며, 별도의 물리적 상품은 제공되지 않습니다.</p>
             </div>
           </section>
 
@@ -56,7 +56,7 @@ export default function RefundPage() {
               </div>
 
               <p className={itemClassName}>2. 유료 콘텐츠의 가격은 서비스 내에 표시된 금액을 기준으로 하며, 별도의 표시가 없는 한 부가세가 포함된 금액으로 합니다.</p>
-              <p className={itemClassName}>3. 결제가 정상적으로 완료되면 이용자에게 해당 콘텐츠에 대한 잉용 권한이 즉시 부여됩니다.</p>
+              <p className={itemClassName}>3. 결제가 정상적으로 완료되면 이용자에게 해당 콘텐츠에 대한 이용 권한이 즉시 부여됩니다.</p>
 
               <p className={itemClassName}>4. 유료 콘텐츠의 이용 방식은 다음과 같습니다.</p>
               <div className="space-y-2">
@@ -86,8 +86,6 @@ export default function RefundPage() {
                   단, 위와 같은 경우에도 서비스는 사전에 해당 사실을 명확히 고지하고 이용자의 동의를 받은 경우에 한하여 청약철회를 제한할 수 있습니다.
                 </p>
               </div>
-
-              <p className={itemClassName}>4. 다음 각 호의 경우에는 환불이 가능합니다.</p>
             </div>
           </section>
 
@@ -106,10 +104,10 @@ export default function RefundPage() {
 
                 <p className={itemClassName}>3. 제2항에 따른 청약철회 제한은, 서비스가 결제 전에 다음 사항을 명확히 고지하고 이용자의 동의를 받은 경우에 한하여 적용됩니다.</p>
                 <div className="space-y-2">
-                  <p className={subItemClassName}>① 디지털 콘텐츠의 특성상 이용 또는 다운로드 시 청약철회가 제한될 수 있다는 사실</p>
+                  <p className={subItemClassName}>① 디지털 콘텐츠의 특성상 이용 또는 다운로드 시 청약 철회가 제한될 수 있다는 사실</p>
                 </div>
 
-                <p className={itemClassName}>4. 이용자가 콘텐츠를 다운로드하거나 재생하는 등 이용을 개시한 경우, 해당 시점부터 청약철회가 제한됩니다.</p>
+                <p className={itemClassName}>4. 이용자가 콘텐츠를 다운로드하거나 재생하는 등 이용을 게시한 경우, 해당 시점부터 청약철회가 제한됩니다.</p>
 
                 <p className={itemClassName}>5. 다음 각 호의 경우에는 제2항에도 불구하고 환불이 가능합니다.</p>
                 <div className="space-y-2">
@@ -139,7 +137,7 @@ export default function RefundPage() {
                   <p className={subItemClassName}>④ 계정의 일시 정지 또는 영구 이용 제한</p>
                 </div>
 
-                <p className={itemClassName}>3. 서비스는 위반 행위가 중대하거나 반복되는 경우, 관련 법령에 따라 ㅁ민형사상 법적 조치를 취할 수 있습니다.</p>
+                <p className={itemClassName}>3. 서비스는 위반 행위가 중대하거나 반복되는 경우, 관련 법령에 따라 민,형사상 법적 조치를 취할 수 있습니다.</p>
                 <p className={itemClassName}>4. 서비스는 제재 조치 시 사전 또는 사후에 그 사유를 이용자에게 통지할 수 있습니다.</p>
               </div>
           </section>
@@ -157,7 +155,7 @@ export default function RefundPage() {
                 <p className={subItemClassName}>③ 이용자의 부주의 또는 과실로 인한 파일 손실 또는 데이터 손상</p>
               </div>
 
-              <p className={itemClassName}>2. 서비스는 뮤료로 제공되는 콘텐츠에 대하여 품질, 안정성, 정확성 등에 대해 보증하지 않으며, 이에 따른 손해에 대해 책임을지지 않습니다.</p>
+              <p className={itemClassName}>2. 서비스는 무료로 제공되는 콘텐츠에 대하여 품질, 안정성, 정확성 등에 대해 보증하지 않으며, 이에 따른 손해에 대해 책임을지지 않습니다.</p>
               <p className={itemClassName}>3. 단, 서비스의 고의 또는 중대한 과실로 인하여 발생한 손해에 대해서는 관련 법령에 따라 책임을 부담합니다.</p>
             </div>
           </section>
@@ -185,9 +183,8 @@ export default function RefundPage() {
                   <p className={subItemClassName}>① 상호</p>
                   <p className={subItemClassName}>② 대표자 성명</p>
                   <p className={subItemClassName}>③ 사업자등록번호</p>
-                  <p className={subItemClassName}>④ 통신판매업 신고버호</p>
-                  <p className={subItemClassName}>⑤ 사업장 소재지</p>
-                  <p className={subItemClassName}>⑥ 전자우편주소 및 연락처</p>
+                  <p className={subItemClassName}>④ 사업장 소재지</p>
+                  <p className={subItemClassName}>⑤ 전자우편주소 및 연락처</p>
                 </div>
 
                 <p className={itemClassName}>2. 서비스는 유료 디지털 콘텐츠의 결제 이전에 다음 사항을 이용자에게 명확히 안내합니다.</p>
@@ -219,7 +216,7 @@ export default function RefundPage() {
             </div>
             <div className={`${bodyClassName} space-y-2`}>
               <p>본 정책은 시행일로부터 적용됩니다.</p>
-              <p>시행일: 2026년 03월 27일</p>
+              <p>시행일: 2026년 4월 10일</p>
             </div>
           </section>
         </div>

@@ -49,7 +49,7 @@ function getStatusTone(status: "pending" | "paid") {
 
 function SummaryHeader() {
   return (
-    <div className="hidden md:grid grid-cols-[1.4fr_0.9fr_1fr_0.8fr] gap-4 px-4 py-3 text-xs font-semibold text-gray-400 border-b border-white/10">
+    <div className="hidden md:grid grid-cols-[1.5fr_1fr_1fr_1.05fr] gap-4 px-4 py-3 text-sm font-semibold text-gray-400 border-b border-white/10">
       <div>이름(닉네임)</div>
       <div>합계금액</div>
       <div>계좌정보(일부)</div>
@@ -128,7 +128,7 @@ function SettlementCard({
       {expanded && (
         <div className="border-t border-white/10">
           <div className="px-4 py-4">
-            <div className="grid grid-cols-[1.45fr_0.85fr_0.55fr_0.95fr] gap-3 text-xs font-semibold text-gray-400 pb-3">
+            <div className="grid grid-cols-[1.4fr_0.75fr_0.55fr_0.88fr] gap-3 text-xs font-semibold text-gray-400 pb-3">
               <div>제목</div>
               <div>가격</div>
               <div>건수</div>

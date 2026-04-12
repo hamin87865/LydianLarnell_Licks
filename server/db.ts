@@ -76,6 +76,20 @@ export async function ensureDatabase() {
 
   try {
     await pool.query(`CREATE EXTENSION IF NOT EXISTS pgcrypto;`);
+
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS "session" (
+        "sid" varchar NOT NULL,
+        "sess" json NOT NULL,
+        "expire" timestamp(6) NOT NULL,
+        CONSTRAINT "session_pkey" PRIMARY KEY ("sid")
+      );
+    `);
+
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS "IDX_session_expire"
+      ON "session" ("expire");
+    `);
   } catch (error) {
     const reason = classifyDbError(error);
     throw new Error(`${reason}: ${error instanceof Error ? error.message : String(error)}`);
@@ -127,6 +141,6 @@ export function createSessionStore() {
   return new PgStore({
     pool,
     tableName: "session",
-    createTableIfMissing: true,
+    createTableIfMissing: false,
   });
 }

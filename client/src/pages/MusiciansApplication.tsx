@@ -262,8 +262,10 @@ export default function MusiciansApplication() {
                 <div className="rounded-xl border border-blue-500/30 bg-blue-500/10 p-4 mt-4 text-sm text-blue-200">
                   <p className="mb-2">연주 영상 제출 기준</p>
                   <p>본 플랫폼은 콘텐츠 품질 유지를 위해 최소한의 영상/음질 기준을 요구합니다.</p>
-                  <p>아래 기준을 충족하지 못할 경우 심사에서 제외될 수 있습니다. (뮤지션 승급 후 콘텐츠 업로드 조건 동일)</p>
-                  <p>필수 조건</p>
+                  <p>아래 기준을 충족하지 못할 경우 심사에서 제외될 수 있습니다.</p>
+                  <p>(뮤지션 승급 후 콘텐츠 업로드 조건 동일)</p>
+                  <p className="mt-2">
+                    필수 조건</p>
                   <p>해상도: 최소 1080p 이상</p>
                   <p>촬영: 고정된 카메라 사용 (흔들림 금지)</p>
                   <p>구도: 손과 악기 연주가 명확히 보일 것</p>
@@ -274,10 +276,6 @@ export default function MusiciansApplication() {
                   <p className="text-xs text-red-400 mt-2">
                     자막 사용 금지, 반드시 종이에 작성된 메일이 영상 안에 보여야 합니다.
                   </p>
-                  <p>권장 사항</p>
-                  <p>오디오 인터페이스 또는 라인 녹음 사용</p>
-                  <p>적절한 조명 환경</p>
-                  <p>깔끔한 촬영 배경</p>
                 </div>
               </div>
             </section>

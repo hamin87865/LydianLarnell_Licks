@@ -1258,40 +1258,6 @@ export async function registerRoutes(
     next();
   });
 
-  // 임시 관리자 권한 부여 API (배포 후 반드시 삭제)
-app.get("/api/setup/make-admin", async (req, res) => {
-  try {
-    const email = "rkdtlsdn123461@naver.com"; // 실제 이메일로 변경
-
-    const result = await pool.query(
-      `UPDATE users
-       SET role = 'admin'
-       WHERE LOWER(email) = LOWER($1)
-       RETURNING id, email, role`,
-      [email]
-    );
-
-    if (result.rowCount === 0) {
-      return res.status(404).json({
-        success: false,
-        message: "사용자를 찾을 수 없습니다.",
-      });
-    }
-
-    return res.json({
-      success: true,
-      message: "관리자 권한이 부여되었습니다.",
-      user: result.rows[0],
-    });
-  } catch (error) {
-    console.error("관리자 권한 부여 실패:", error);
-    return res.status(500).json({
-      success: false,
-      message: "관리자 권한 부여 중 오류가 발생했습니다.",
-    });
-  }
-});
-
   app.get("/api/bootstrap", async (req, res) => {
     const user = requireAdmin(req, res);
     if (!user) return;

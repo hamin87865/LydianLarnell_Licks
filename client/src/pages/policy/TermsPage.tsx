@@ -75,6 +75,7 @@ export default function TermsPage() {
               <p className={itemClassName}>2. 이용자는 로그인 여부와 관계없이 콘텐츠를 열람할 수 있습니다.</p>
               <p className={itemClassName}>3. 단, PDF 다운로드 및 일부 기능은 로그인한 회원에게만 제공될 수 있습니다.</p>
               <p className={itemClassName}>4. 서비스는 운영상 필요에 따라 기능을 변경하거나 중단할 수 있으며, 합리적 사유(점검, 장애등)를 정확히 명시를 합니다.</p>
+              <p className={itemClassName}>5. 서비스 공지는 Lydian Larnell 공식 네이버 블로그에 게시 됩니다.</p>
             </div>
           </section>
 

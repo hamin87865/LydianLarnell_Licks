@@ -52,8 +52,6 @@ export default function Payment() {
   const [paying, setPaying] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [preparedOrder, setPreparedOrder] = useState<PaymentPrepareResponse | null>(null);
-  const [refundAgreementChecked, setRefundAgreementChecked] = useState(false);
-
   const paymentWidgetRef = useRef<TossPaymentMethodWidget | null>(null);
   const agreementWidgetRef = useRef<TossAgreementWidget | null>(null);
   const requestPaymentRef = useRef<null | (() => Promise<void>)>(null);
@@ -192,11 +190,6 @@ export default function Payment() {
       return;
     }
 
-    if (!refundAgreementChecked) {
-      notifyError("디지털 콘텐츠 환불 제한 약관에 동의해 주세요.");
-      return;
-    }
-
     const requestPayment = requestPaymentRef.current;
     if (!requestPayment) {
       notifyError("결제창을 준비하지 못했습니다.");
@@ -233,7 +226,6 @@ export default function Payment() {
       >
         <div className="rounded-lg border border-white/10 bg-card p-8">
           <h1 className="mb-8 text-4xl font-display font-bold text-white">결제</h1>
-
           <div className="space-y-4 text-white">
             <div>
               <p className="text-sm text-gray-400">콘텐츠</p>
@@ -265,47 +257,20 @@ export default function Payment() {
           <div className="mt-8 space-y-4">
             <div>
               <p className="mb-3 text-sm text-gray-400">결제 수단</p>
-              <div id="payment-method-widget" className="rounded-lg border border-white/10 bg-white p-3" />
+              <div id="payment-method-widget" className="rounded-lg border border-white/10 bg-black/20 p-3" />
             </div>
-
             <div>
               <p className="mb-3 text-sm text-gray-400">약관 동의</p>
-
-              <div className="rounded-lg border border-white/10 bg-white p-3">
-                {/* 토스 약관 */}
-                <div id="payment-agreement-widget" />
-
-                {/* 우리 서비스 약관 */}
-                <label className="flex cursor-pointer items-start gap-2 border-t border-white/10 pt-3">
-                  <input
-                    type="checkbox"
-                    checked={refundAgreementChecked}
-                    onChange={(e) => setRefundAgreementChecked(e.target.checked)}
-                    className="mt-1 ml-7 h-8 w-5 rounded-lg border-white/20 bg-transparent accent-primary"
-                  />
-                  <span className="max-w-85 text-sm leading-relaxed text-black/65">
-                    [필수] 디지털 콘텐츠의 특성상 다운로드 또는 이용 시 환불이 제한될 수 있음에 동의합니다.
-                  </span>
-                </label>
-              </div>
+              <div id="payment-agreement-widget" className="rounded-lg border border-white/10 bg-black/20 p-3" />
             </div>
-            
             {errorMessage && <p className="text-sm text-red-300">{errorMessage}</p>}
           </div>
 
           <div className="mt-8 flex gap-3">
-            <Button
-              onClick={() => void handlePayment()}
-              disabled={!widgetReady || paying || !!errorMessage || !refundAgreementChecked}
-              className="flex-1 rounded py-3 font-bold text-white hover:bg-primary/90"
-            >
+            <Button onClick={() => void handlePayment()} disabled={!widgetReady || paying || !!errorMessage} className="flex-1 rounded py-3 font-bold text-white hover:bg-primary/90">
               {paying ? "결제창 여는 중..." : "결제하기"}
             </Button>
-
-            <Button
-              onClick={() => navigate(`/content/${content.id}`)}
-              className="flex-1 rounded bg-gray-700 py-3 font-bold text-white hover:bg-gray-600"
-            >
+            <Button onClick={() => navigate(`/content/${content.id}`)} className="flex-1 rounded bg-gray-700 py-3 font-bold text-white hover:bg-gray-600">
               취소
             </Button>
           </div>

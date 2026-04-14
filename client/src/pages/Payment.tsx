@@ -271,20 +271,33 @@ export default function Payment() {
             <div>
               <p className="mb-3 text-sm text-gray-400">약관 동의</p>
 
-              <div className="rounded-lg border border-white/10 bg-black/20 p-3 space-y-3">
+              <div className="rounded-lg border border-white/10 bg-white p-3">
                 {/* 토스 약관 */}
                 <div id="payment-agreement-widget" />
 
                 {/* 우리 서비스 약관 */}
-                <label className="flex cursor-pointer items-start gap-3 border-t border-white/10 pt-3">
+                <label className="flex cursor-pointer items-start gap-2.5 pt-3">
+                  <span
+                    className={`mt-[3px] flex h-[16px] w-[16px] shrink-0 items-center justify-center rounded-[2px] border ${
+                      refundAgreementChecked
+                        ? "border-white bg-white"
+                        : "border-white/80 bg-transparent"
+                    }`}
+                  >
+                    {refundAgreementChecked && (
+                      <span className="block h-[8px] w-[8px] rounded-[1px] bg-black" />
+                    )}
+                  </span>
+
                   <input
                     type="checkbox"
                     checked={refundAgreementChecked}
                     onChange={(e) => setRefundAgreementChecked(e.target.checked)}
-                    className="mt-1 h-4 w-4 rounded border-white/20 bg-transparent accent-primary"
+                    className="sr-only"
                   />
-                  <span className="text-sm leading-6 text-gray-200">
-                    디지털 콘텐츠의 특성상 다운로드 또는 이용 시 환불이 제한될 수 있음에 동의합니다.
+
+                  <span className="text-[15px] leading-[1.7] text-white">
+                    [필수] 디지털 콘텐츠의 특성상 다운로드 또는 이용 시 환불이 제한될 수 있음에 동의합니다.
                   </span>
                 </label>
               </div>

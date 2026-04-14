@@ -38,6 +38,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://api.tosspayments.com",
           "https://pay.tosspayments.com",
           "https://js.tosspayments.com",
+          "https://payment-widget.tosspayments.com",
+          "https://log.tosspayments.com",
           "https://www.youtube.com",
         ],
         frameSrc: [
@@ -45,6 +47,7 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://js.tosspayments.com",
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
+          "https://payment-widget.tosspayments.com",
           "https://www.youtube.com",
           "https://www.youtube-nocookie.com",
         ],

@@ -257,11 +257,11 @@ export default function Payment() {
           <div className="mt-8 space-y-4">
             <div>
               <p className="mb-3 text-sm text-gray-400">결제 수단</p>
-              <div id="payment-method-widget" className="rounded-lg border border-white/10 bg-black/20 p-3" />
+              <div id="payment-method-widget" className="rounded-lg border border-white/10 bg-white p-3" />
             </div>
             <div>
               <p className="mb-3 text-sm text-gray-400">약관 동의</p>
-              <div id="payment-agreement-widget" className="rounded-lg border border-white/10 bg-black/20 p-3" />
+              <div id="payment-agreement-widget" className="rounded-lg border border-white/10 bg-white p-3" />
             </div>
             {errorMessage && <p className="text-sm text-red-300">{errorMessage}</p>}
           </div>

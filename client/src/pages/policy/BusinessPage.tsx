@@ -29,13 +29,13 @@ export default function BusinessInfoPage() {
               <tr>
                 <th className={thClassName}>상호</th>
                 <td className={tdClassName}>
-                  리디안라넬 (Lydian Larnell)
+                  리디안 라넬(Lydian Larnell)
                 </td>
               </tr>
               <tr>
                 <th className={thClassName}>대표자명</th>
                 <td className={tdClassName}>
-                  강신우 (Kang ShinWoo)
+                  강신우
                 </td>
               </tr>
               <tr>

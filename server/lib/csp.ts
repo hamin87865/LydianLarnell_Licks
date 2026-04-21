@@ -22,6 +22,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://*.tosspayments.com",
           "https://static.toss.im",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
           "https://www.youtube.com",
           "https://www.youtube.com/iframe_api",
           "https://s.ytimg.com",
@@ -34,6 +36,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://*.tosspayments.com",
           "https://static.toss.im",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
           "https://www.youtube.com",
           "https://www.youtube.com/iframe_api",
           "https://s.ytimg.com",
@@ -50,6 +54,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://log.tosspayments.com",
           "https://event.tosspayments.com",
           "https://static.toss.im",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
           "https://www.youtube.com",
         ],
 
@@ -59,6 +65,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
           "https://www.youtube.com",
           "https://www.youtube-nocookie.com",
         ],
@@ -69,6 +77,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
         ],
 
         formAction: [
@@ -76,6 +86,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
         ],
 
         imgSrc: [
@@ -87,6 +99,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://static.toss.im",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://www.vpay.co.kr",
+          "https://*.vpay.co.kr",
         ],
 
         mediaSrc: [SELF, BLOB, "https://www.youtube.com"],

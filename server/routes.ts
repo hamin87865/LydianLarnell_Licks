@@ -18,6 +18,10 @@ import fs from "fs";
 import nodemailer from "nodemailer";
 import { isSupportedVideoUrl } from "@shared/videoPolicy";
 
+function normalizeUploadedFilename(filename: string): string {
+  return Buffer.from(filename, "latin1").toString("utf8");
+}
+
 interface SessionUser {
   id: string;
   email: string;
@@ -1393,7 +1397,7 @@ export async function registerRoutes(
 
     res.json({ content: mapContent(row), hasPurchased });
   });
-  
+
   app.get("/api/contents/:id/pdf-download", async (req, res) => {
     let contentId: string;
     try {
@@ -2418,11 +2422,14 @@ export async function registerRoutes(
       const videoFilePath = videoFile ? `${filePathToPublicUrl(videoFile.path)}` : null;
       const pdfFilePath = pdfFile ? `${toStoredRelativePath(pdfFile.path)}` : null;
       const resolvedAuthorName = await resolveAuthorDisplayName(user.id, user.name);
+      const originalPdfFileName = pdfFile
+        ? normalizeUploadedFilename(pdfFile.originalname)
+        : null;
 
       const result = await pool.query(
         `INSERT INTO contents (title, description, category, thumbnail, video_url, video_file, pdf_file, pdf_file_name, author_id, author_name, pdf_price)
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
-         RETURNING id, title, description, category, thumbnail, video_url, video_file, pdf_file, pdf_file_name, author_id, author_name, created_at, pdf_price`,
+        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
+        RETURNING id, title, description, category, thumbnail, video_url, video_file, pdf_file, pdf_file_name, author_id, author_name, created_at, pdf_price`,
         [
           String(title).trim(),
           String(description).trim(),
@@ -2431,7 +2438,7 @@ export async function registerRoutes(
           normalizeOptionalText(videoUrl),
           videoFilePath,
           pdfFilePath,
-          pdfFile?.originalname || null,
+          originalPdfFileName,
           user.id,
           resolvedAuthorName,
           Number.isFinite(parsedPdfPrice) ? parsedPdfPrice : 0,

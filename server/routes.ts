@@ -1353,10 +1353,27 @@ export async function registerRoutes(
 
   app.get("/api/contents/:id", async (req, res) => {
     const result = await pool.query(
-      `SELECT c.id, c.title, c.description, c.category, c.thumbnail, c.video_url, c.video_file, c.pdf_file, c.pdf_file_name, c.author_id, c.author_name, c.created_at, c.pdf_price, c.is_sanctioned, c.sanction_reason, c.sanctioned_at
-       FROM contents c
-       JOIN users u ON u.id = c.author_id
-       WHERE c.id = $1 AND u.deleted_at IS NULL`,
+      `SELECT
+        c.id,
+        c.title,
+        c.description,
+        c.category,
+        c.thumbnail,
+        c.video_url,
+        c.video_file,
+        c.pdf_file,
+        c.pdf_file_name,
+        c.author_id,
+        COALESCE(NULLIF(TRIM(us.nickname), ''), u.name, c.author_name) AS author_name,
+        c.created_at,
+        c.pdf_price,
+        c.is_sanctioned,
+        c.sanction_reason,
+        c.sanctioned_at
+      FROM contents c
+      JOIN users u ON u.id = c.author_id
+      LEFT JOIN user_settings us ON us.user_id = c.author_id
+      WHERE c.id = $1 AND u.deleted_at IS NULL`,
       [req.params.id],
     );
 
@@ -1376,7 +1393,7 @@ export async function registerRoutes(
 
     res.json({ content: mapContent(row), hasPurchased });
   });
-
+  
   app.get("/api/contents/:id/pdf-download", async (req, res) => {
     let contentId: string;
     try {

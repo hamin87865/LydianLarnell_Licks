@@ -37,6 +37,7 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://js.tosspayments.com",
           "https://payment-widget.tosspayments.com",
           "https://payment-gateway.tosspayments.com",
+          "https://payment-gateway-sandbox.tosspayments.com",
           "https://apigw.tosspayments.com",
           "https://log.tosspayments.com",
           "https://event.tosspayments.com",

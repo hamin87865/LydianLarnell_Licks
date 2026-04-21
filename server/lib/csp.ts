@@ -8,6 +8,14 @@ const BLOB = "blob:";
 export function buildProductionHelmetConfig(): HelmetOptions {
   return {
     referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+
+    // 핵심 1
+    crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+
+    // 핵심 2
+    // 외부 결제 리소스/새창 흐름에서 걸리면 false로 끄는 쪽이 가장 확실
+    crossOriginResourcePolicy: false,
+
     contentSecurityPolicy: {
       useDefaults: true,
       directives: {
@@ -130,5 +138,7 @@ export function buildDevelopmentHelmetConfig(): HelmetOptions {
   return {
     contentSecurityPolicy: false,
     referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+    crossOriginOpenerPolicy: false,
+    crossOriginResourcePolicy: false,
   };
 }

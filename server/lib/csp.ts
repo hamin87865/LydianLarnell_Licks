@@ -1,6 +1,7 @@
 import type { HelmetOptions } from "helmet";
 
 const SELF = "'self'";
+const NONE = "'none'";
 const UNSAFE_INLINE = "'unsafe-inline'";
 const DATA = "data:";
 const BLOB = "blob:";
@@ -9,19 +10,18 @@ export function buildProductionHelmetConfig(): HelmetOptions {
   return {
     referrerPolicy: { policy: "strict-origin-when-cross-origin" },
 
-    // 핵심 1
+    // 결제 팝업/외부 인증창 대응
     crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
 
-    // 핵심 2
-    // 외부 결제 리소스/새창 흐름에서 걸리면 false로 끄는 쪽이 가장 확실
-    crossOriginResourcePolicy: false,
+    // false보다 한 단계 덜 완화된 운영형
+    crossOriginResourcePolicy: { policy: "same-site" },
 
     contentSecurityPolicy: {
       useDefaults: true,
       directives: {
         defaultSrc: [SELF],
         baseUri: [SELF],
-        objectSrc: ["'none'"],
+        objectSrc: [NONE],
 
         scriptSrc: [
           SELF,
@@ -30,6 +30,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://*.tosspayments.com",
           "https://static.toss.im",
+          "https://www.gstatic.com",
+          "https://*.gstatic.com",
           "https://www.vpay.co.kr",
           "https://*.vpay.co.kr",
           "https://www.youtube.com",
@@ -44,6 +46,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://*.tosspayments.com",
           "https://static.toss.im",
+          "https://www.gstatic.com",
+          "https://*.gstatic.com",
           "https://www.vpay.co.kr",
           "https://*.vpay.co.kr",
           "https://www.youtube.com",
@@ -62,6 +66,8 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://log.tosspayments.com",
           "https://event.tosspayments.com",
           "https://static.toss.im",
+          "https://www.gstatic.com",
+          "https://*.gstatic.com",
           "https://www.vpay.co.kr",
           "https://*.vpay.co.kr",
           "https://www.youtube.com",
@@ -73,6 +79,9 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://*.payco.com",
+          "https://*.kcp.co.kr",
+          "https://*.inicis.com",
           "https://www.vpay.co.kr",
           "https://*.vpay.co.kr",
           "https://www.youtube.com",
@@ -85,6 +94,9 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://*.payco.com",
+          "https://*.kcp.co.kr",
+          "https://*.inicis.com",
           "https://www.vpay.co.kr",
           "https://*.vpay.co.kr",
         ],
@@ -94,6 +106,9 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://pay.tosspayments.com",
           "https://tosspayments.com",
           "https://*.tosspayments.com",
+          "https://*.payco.com",
+          "https://*.kcp.co.kr",
+          "https://*.inicis.com",
           "https://www.vpay.co.kr",
           "https://*.vpay.co.kr",
         ],
@@ -129,8 +144,15 @@ export function buildProductionHelmetConfig(): HelmetOptions {
           "https://js.tosspayments.com",
           "https://static.toss.im",
         ],
+
+        // Helmet 기본 frame-ancestors 'self' 유지
+        // 외부 사이트에 내 페이지를 iframe 삽입하지 못하게 유지
+        frameAncestors: [SELF],
       },
     },
+
+    // 레거시 클릭재킹 방어 유지
+    xFrameOptions: { action: "sameorigin" },
   };
 }
 

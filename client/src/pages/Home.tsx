@@ -87,6 +87,9 @@ export default function Home() {
             <p className="font-mono text-sm text-gray-400">
               &copy; {new Date().getFullYear()} Lydian Larnell. ALL RIGHTS RESERVED.
             </p>
+            <p className="mt-1 font-mono text-sm text-gray-500">
+              Built & Developed by Hamin Jung
+            </p>
           </footer>
         </section>
       </div>
